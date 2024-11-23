@@ -4,6 +4,9 @@ spring:
   jpa:
 #    defer-datasource-initialization: true
     database-platform: org.hibernate.dialect.H2Dialect
+#   the following block is necessary to prevent the entity classes from overwriting the schema setup from the schema.sql
+    hibernate:
+      ddl-auto: none
   sql:
     init:
       mode: always
@@ -18,3 +21,5 @@ spring:
       path: /h2-console
       settings.trace: false
       settings.web-allow-others: false
+
+

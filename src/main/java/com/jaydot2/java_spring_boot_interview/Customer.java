@@ -17,10 +17,10 @@ public class Customer {
 
     @Id
     private Integer id;
-    @Column
+    @Column(name="FIRSTNAME")
     private String firstName;
-    @Column
+    @Column(name="LASTNAME")
     private String lastName;
-    @Column
+    @Column(name="ACCOUNTNUMBER")
     private Integer accountNumber;
 }
