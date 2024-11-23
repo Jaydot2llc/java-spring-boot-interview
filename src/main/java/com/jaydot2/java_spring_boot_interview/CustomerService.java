@@ -7,8 +7,15 @@ import java.util.List;
 
 @Service
 public class CustomerService {
+
+    private CustomerRepository customerRepository;
+
+    public CustomerService(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
+
     public List<Customer> getAllCustomers() {
-        List<Customer> customers = new ArrayList<>();
+        List<Customer> customers = (List<Customer>) customerRepository.findAll();
         return customers;
     }
 }

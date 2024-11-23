@@ -3,18 +3,22 @@ package com.jaydot2.java_spring_boot_interview;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class CustomerServiceTest {
 
     @InjectMocks
     CustomerService customerService;
+
+    @Mock
     private CustomerRepository mockCustomerRepository;
 
     @Test
@@ -34,8 +38,24 @@ class CustomerServiceTest {
         // When
         List<Customer> actualCustomers = customerService.getAllCustomers();
         // Then
-        verify(mockCustomerRepository);
+        verify(mockCustomerRepository).findAll();
     }
 
+    @Test
+    void whenGetAllCustomerCalled_shouldReturnCustomerList() {
+        // Given
+        Iterable<Customer> expectedCustomers = List.of(Customer.builder()
+                .id(1)
+                .firstName("Joe")
+                .lastName("Blow")
+                .accountNumber(1111)
+                .build());
+        when(mockCustomerRepository.findAll()).thenReturn(expectedCustomers);
+        // When
+        List<Customer> actualCustomers = customerService.getAllCustomers();
+        // Then
+        assertNotNull(actualCustomers);
+        assertTrue(actualCustomers.size() > 0);
+    }
 
 }
