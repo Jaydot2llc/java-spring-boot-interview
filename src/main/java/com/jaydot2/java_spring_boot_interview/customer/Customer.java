@@ -1,4 +1,4 @@
-package com.jaydot2.java_spring_boot_interview;
+package com.jaydot2.java_spring_boot_interview.customer;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

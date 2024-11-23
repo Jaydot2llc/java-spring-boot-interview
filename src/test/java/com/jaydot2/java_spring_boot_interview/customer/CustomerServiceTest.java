@@ -1,5 +1,8 @@
-package com.jaydot2.java_spring_boot_interview;
+package com.jaydot2.java_spring_boot_interview.customer;
 
+import com.jaydot2.java_spring_boot_interview.customer.Customer;
+import com.jaydot2.java_spring_boot_interview.customer.CustomerRepository;
+import com.jaydot2.java_spring_boot_interview.customer.CustomerService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
