@@ -20,9 +20,11 @@ The fourth endpoint should return account information for a single customer.
 
 All are GET operations.  You can create one or more new controllers for these operations or use an existing controller in the environment.
 
-Create the domain objects for your Customer and Account data.
+You will need to create all controllers, service objects, data persistance objects, and domain objects for your Customer and Account data.
 
 If a database is not available, you are allowed to hard code data in the service layer of the application.
+
+**BONUS:** Write unit tests for all of your code if time permits.
 
 Your code must compile and run when it is added to an existing application.  Here is the starter code below:
 
