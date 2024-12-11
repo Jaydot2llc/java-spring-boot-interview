@@ -38,10 +38,11 @@ class AccountControllerTest {
     @Test
     void whenAccountEndpointIsCalled_thenReturnAccount() {
         // Given
-
+        Integer fakeAccountNumber = 1234;
         // When
-//        Account actualAccount = accountController;
+        Account actualAccount = accountController.getAccountByAccountNumber(fakeAccountNumber);
 
         // Then
+        assertNotNull(actualAccount);
     }
 }

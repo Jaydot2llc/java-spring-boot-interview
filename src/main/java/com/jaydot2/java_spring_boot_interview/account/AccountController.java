@@ -9,6 +9,7 @@ public class AccountController {
 
     @GetMapping("/account/{accountNumber}")
     public Account getAccountByAccountNumber(@PathVariable Integer accountNumber) {
-        return null;
+        Account account = new Account();
+        return account;
     }
 }

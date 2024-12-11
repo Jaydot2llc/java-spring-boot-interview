@@ -10,16 +10,5 @@ import java.util.List;
 @RestController
 public class CustomerController {
 
-    private CustomerService customerService;
-
-    public CustomerController(CustomerService customerService) {
-        this.customerService = customerService;
-    }
-
-    @GetMapping("/customers")
-    public List<Customer> getAllCustomers() {
-        log.debug("Customers endpoint called...");
-        List<Customer> customers = customerService.getAllCustomers();
-        return customers;
-    }
+    
 }
