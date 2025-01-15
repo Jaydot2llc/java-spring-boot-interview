@@ -2,13 +2,13 @@
 
 ## Instructions
 
-You will need access to an IDE for thie exercise.  You may use the spring initializer website (https://start.spring.io/) to generate the starter application.  This is an open book exercise.
+You will need access to an IDE for thie exercise. This is an open book exercise.
 
 Create a controller with three RESTful endpoints.  
 The first endpoint should return the list of customers that is shown in the array.  
 The second endpoint should return a single customer by id.  
 The third endpoint should return a single account.
-The fourth endpoint should return account information for a single customer.
+OPTIONAL:  The fourth endpoint should return account information for a single customer.
 
 `/customers`
 
@@ -26,19 +26,9 @@ If a database is not available, you are allowed to hard code data in the service
 
 **BONUS:** Write unit tests for all of your code if time permits.
 
-Your code must compile and run when it is added to an existing application.  Here is the starter code below:
+Your code must compile and run when it is added to an existing application.  
 
-```java
-
-//TODO add any import statements
-
-//TODO add any annotations
-public class CustomerController {
-    //TODO add your logic below
-    
-}
-
-```
+Data configuration files are provided in the exercise.
 
 ### Data
 
@@ -82,28 +72,4 @@ accounts
         "balance": "75.00"
     }
 ]
-```
-## Resources
-- [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa)
-- [Spring Boot With H2 Database](https://www.baeldung.com/spring-boot-h2-database)
-- [Quick Guide on Loading Initial Data with Spring Boot](https://www.baeldung.com/spring-boot-data-sql-and-schema-sql)
-
-## Repository Setup
-
-### …or create a new repository on the command line
-```sh
-echo "# java-spring-boot-interview" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:Jaydot2llc/java-spring-boot-interview.git
-git push -u origin main
-```
-
-### …or push an existing repository from the command line
-```sh
-git remote add origin git@github.com:Jaydot2llc/java-spring-boot-interview.git
-git branch -M main
-git push -u origin main
 ```
