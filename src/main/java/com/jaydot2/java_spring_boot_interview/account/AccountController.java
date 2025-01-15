@@ -7,9 +7,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AccountController {
 
-    @GetMapping("/account/{accountNumber}")
-    public Account getAccountByAccountNumber(@PathVariable Integer accountNumber) {
-        Account account = new Account();
-        return account;
-    }
 }
